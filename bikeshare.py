@@ -41,14 +41,10 @@ def get_filters():
     """Get city input"""
     while True:
         city_input = ''
-        random_city = random.choice(list(CITY_DATA.keys()))
         try:
             city_input = input(
-                " :) Input a city \n --> Choose between; {}. \n Press enter when blank to use \'{}\': ".format(
-                    ', '.join(list(CITY_DATA.keys())), random_city)).lower().strip()
-
-            if city_input == '':
-                city_input = random_city
+                " :) Input a city \n --> Choose between; {}: ".format(
+                    ', '.join(list(CITY_DATA.keys()))).lower().strip()
 
             city_check = CITY_DATA[city_input]
             city = city_input
@@ -205,8 +201,6 @@ def user_stats(df):
     group_by_user_type = df['User Type'].value_counts()
     for index, trip in enumerate(group_by_user_type):
         print(" {}: {}".format(group_by_user_type.index[index], trip))
-
-    print()
 
     """Display counts of gender"""
     if 'Gender' in df:
