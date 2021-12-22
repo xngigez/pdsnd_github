@@ -199,8 +199,6 @@ def user_stats(df):
     for index, trip in enumerate(group_by_user_type):
         print(" {}: {}".format(group_by_user_type.index[index], trip))
 
-    print()
-
     """Display counts of gender"""
     if 'Gender' in df:
         print('The trip counts by gender,')
