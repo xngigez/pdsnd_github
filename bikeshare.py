@@ -2,10 +2,12 @@ import time
 import pandas as pd
 import random
 
+"""Dict of cities"""
 CITY_DATA = {'chicago': 'chicago.csv',
              'new york city': 'new_york_city.csv',
              'washington': 'washington.csv'}
 
+"""Dict of months"""
 MONTHS_DATA = {'January': 'January',
                'February': 'February',
                'March': 'March',
@@ -13,7 +15,8 @@ MONTHS_DATA = {'January': 'January',
                'May': 'May',
                'June': 'June',
                'All': 'all'}
-
+               
+"""Dict of days"""
 DAYS_DATA = {'Monday': 'Monday',
              'Tuesday': 'Tuesday',
              'Wednesday': 'Wednesday',
